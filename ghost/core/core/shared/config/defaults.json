@@ -169,21 +169,25 @@
     },
     "portal": {
         "url": "https://cdn.jsdelivr.net/ghost/portal@~{version}/umd/portal.min.js",
-        "version": "2.22"
+        "version": "2.22",
+        "integrityHash": "sha384-SBP4mD5Iu191V0JQvhwDc3fdO/zkC70BW/uzVZ79HJLEzEY+H7eMJemv5yxLZgk+"
     },
     "sodoSearch": {
         "url": "https://cdn.jsdelivr.net/ghost/sodo-search@~{version}/umd/sodo-search.min.js",
         "styles": "https://cdn.jsdelivr.net/ghost/sodo-search@~{version}/umd/main.css",
-        "version": "1.1"
+        "version": "1.1",
+        "integrityHash": "sha384-B1emDbkkPFygXkcP453/r82BilREzfXcOAmW07QiNGWb/JXtwpOXUe3df65s4eeg"
     },
     "comments": {
         "url": "https://cdn.jsdelivr.net/ghost/comments-ui@~{version}/umd/comments-ui.min.js",
         "styles": "https://cdn.jsdelivr.net/ghost/comments-ui@~{version}/umd/main.css",
-        "version": "0.12"
+        "version": "0.12",
+        "integrityHash": "sha384-NTV3xqeuVylzktszu88cLGazuTZtazNEVJXqjk+mZx0yn8/QtY79HSWY7dzEcCUf"
     },
     "editor": {
         "url": "https://unpkg.com/@tryghost/koenig-lexical@~{version}/dist/koenig-lexical.umd.js",
-        "version": "0.0"
+        "version": "0.0",
+        "integrityHash": "sha384-2fHrA1uEyrPIsbR6IyyfhMKNUaVPVEXUG0pmGYGoSj9KPMNjYC76U1m82SEOG6B/"
     },
     "tenor": {
         "googleApiKey": null,

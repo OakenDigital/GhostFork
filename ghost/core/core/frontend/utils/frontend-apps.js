@@ -13,7 +13,8 @@ function getFrontendAppConfig(app) {
     return {
         scriptUrl,
         stylesUrl,
-        appVersion
+        appVersion,
+        integrityHash,
     };
 }
 

@@ -48,13 +48,14 @@ function getMembersHelper(data, frontendKey) {
     if (!settingsCache.get('members_enabled')) {
         return '';
     }
-    const {scriptUrl} = getFrontendAppConfig('portal');
+    const { scriptUrl, integrityHash } = getFrontendAppConfig('portal');
 
     const colorString = (_.has(data, 'site._preview') && data.site.accent_color) ? data.site.accent_color : '';
     const attributes = {
         ghost: urlUtils.getSiteUrl(),
         key: frontendKey,
-        api: urlUtils.urlFor('api', {type: 'content'}, true)
+        api: urlUtils.urlFor('api', {type: 'content'}, true),
+        integrity: integrityHash,
     };
     if (colorString) {
         attributes['accent-color'] = colorString;
@@ -71,11 +72,12 @@ function getMembersHelper(data, frontendKey) {
 
 function getSearchHelper(frontendKey) {
     const adminUrl = urlUtils.getAdminUrl() || urlUtils.getSiteUrl();
-    const {scriptUrl, stylesUrl} = getFrontendAppConfig('sodoSearch');
+    const { scriptUrl, stylesUrl, integrityHash } = getFrontendAppConfig('sodoSearch');
     const attrs = {
         key: frontendKey,
         styles: stylesUrl,
-        'sodo-search': adminUrl
+        'sodo-search': adminUrl,
+        integrity: integrityHash,
     };
     const dataAttrs = getDataAttributes(attrs);
     let helper = `<script defer src="${scriptUrl}" ${dataAttrs} crossorigin="anonymous"></script>`;
